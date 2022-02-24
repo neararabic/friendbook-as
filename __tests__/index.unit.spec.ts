@@ -10,7 +10,7 @@ import { sayHello } from "../assembly/index";
 describe("Contract", () => {
   //it
   //أحد طرق وصف اختبار مثلما نقول هذا الإختبار يجب أن
-  it("should say print the statement 'hello from the blockchain world!' ", () => {
+  it("should print the statement 'hello from the blockchain world!' ", () => {
     //expect
     //نتوقع نتيجة استدعاء الفنكشن أن تكون مساوية للجملة
     expect(sayHello()).toStrictEqual("hello from the blockchain world!");
