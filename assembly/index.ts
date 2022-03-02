@@ -10,11 +10,22 @@ export class Contract {
     let sender: string = Context.sender;
 
     let writing: Writing = new Writing(message, sender, toWho);
-
     this.writingList.push(writing);
-
     return writing;
   }
+  listWritings_1(): PersistentVector<Writing> {
+    return this.writingList;
+  }
+
+  listWritings(): Array<Writing> {
+    let writings = new Array<Writing>(this.writingList.length);
+    for (let i = 0; i < this.writingList.length; i++) {
+      writings[i] = this.writingList[i];
+    }
+    return writings;
+  }
+
+  //{ _elementPrefix: 'w::', _lengthKey: 'w:len', _length: 1 }
 
   //writeSomething
   //listWriting
