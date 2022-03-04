@@ -13,9 +13,6 @@ export class Contract {
     this.writingList.push(writing);
     return writing;
   }
-  listWritings_1(): PersistentVector<Writing> {
-    return this.writingList;
-  }
 
   listWritings(): Array<Writing> {
     let writings = new Array<Writing>(this.writingList.length);
@@ -24,9 +21,4 @@ export class Contract {
     }
     return writings;
   }
-
-  //{ _elementPrefix: 'w::', _lengthKey: 'w:len', _length: 1 }
-
-  //writeSomething
-  //listWriting
 }
